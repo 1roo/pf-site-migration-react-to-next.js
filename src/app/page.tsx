@@ -1,7 +1,30 @@
+"use client";
+import MainPage from "@/components/MainPage";
+import AboutMePage from "@/components/AboutMePage";
+import SkillsPage from "@/components/SkillsPage";
+import ArchivePage from "@/components/ArchivePage";
+import ProjectsPage from "@/components/ProjectsPage";
+import CareerPage from "@/components/CareerPage";
+import { useRef } from "react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+
 export default function Home() {
+  const mainRef = useRef<HTMLElement | null>(null);
   return (
-    <h1 className="text-3xl font-bold text-blue-600">
-      하나래 포트폴리오 Next.js 마이그레이션 시작
-    </h1>
+    <>
+      <Header mainRef={mainRef} />
+      <main>
+        <MainPage mainRef={mainRef} />
+        <AboutMePage />
+        <SkillsPage />
+        <ArchivePage />
+        <ProjectsPage />
+        <CareerPage />
+      </main>
+      <Footer />
+      <ScrollToTopButton />
+    </>
   );
 }

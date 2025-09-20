@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Pretendard", "sans-serif"],
+        sans: ["var(--font-pretendard)"],
       },
       height: {
         "1/2-screen": "50vh",
