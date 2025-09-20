@@ -45,9 +45,6 @@ export default function ArchivePage() {
               height={120}
             />
             <span className="block font-bold can-select">{item.title}</span>
-            {item.desc && (
-              <p className="text-blue-400 can-select">{item.desc}</p>
-            )}
           </a>
         ))}
       </div>
